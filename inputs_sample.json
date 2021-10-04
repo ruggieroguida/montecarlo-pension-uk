@@ -1,10 +1,39 @@
 {
-  "samples" : 1000,
-  "starting_capital" : 10000,
-  "retirement_age" : 68,
-  "state_pension_age" : 66,
-  "max_age" : 120,
-  "dob" : "1970-01-01",
-  "tax_bands" : [12500.0, 14585.0, 25158.0, 43430.0, 150000.0, 1000000.0],
-  "tax_rates" : [    0.0,    19.0,    20.0,    21.0,     41.0,      46.0]
+  "personal": {
+      "samples": 1000,
+      "starting_capital": 10,
+      "retirement_age": 65,
+      "state_pension_age": 66,
+      "max_age": 120,
+      "dob": "1990-01-01"
+  },
+  "tax": {
+      "tax_bands": [12500.0, 14585.0, 25158.0, 43430.0, 150000.0, 1000000.0],
+      "tax_rates": [0.0, 19.0, 20.0, 21.0, 41.0, 46.0]
+  },
+  "allocation": {
+      "current_stocks": 0.90,
+      "stocks_to_bonds": 0.01,
+      "min_stocks": 0.4
+  },
+  "returns": {
+      "mu_stocks": 0.04,
+      "mu_bonds": 0.005,
+      "vol_stocks": 0.25,
+      "vol_bonds": 0.05
+  },
+  "contributions": {
+      "personal": 500.0,
+      "employee": 100.0,
+      "employer": 100.0,
+      "growth": 0.02,
+      "gov_topup": 0.25,
+      "retirement": 0.0
+  },
+  "retirement": {
+      "monthly_expenses": 2000.0,
+      "tax_free_allowance": 0.25,
+      "state_pension": 9100.0,
+      "state_pension_age": 66
+  }
 }
