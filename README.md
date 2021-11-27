@@ -2,10 +2,12 @@
 
 **Disclaimer**: No financial advice is given or implied. Author is not a registered investment advisor. Information provided for educational purposes only.
 
-A simple calculator to estimate the probability of a comfortable retirement.
+An attempt to develop a simple calculator to estimate the probability of a comfortable retirement. **There are several assumptions that need to be verified.**
+
+Feel free to open an issue with suggestions. I am not a financial expert or advisor.
 
 ## Install
-You need a working Python 3 setup
+You need a working Python 3 installation.
 
 ```
 git clone https://github.com/ruggieroguida/montecarlo-pension-uk.git
