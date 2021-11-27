@@ -7,7 +7,7 @@ An attempt to develop a simple calculator to estimate the probability of a comfo
 Feel free to open an issue with suggestions. I am not a financial expert or advisor.
 
 ## Install
-You need a working Python 3 installation.
+You need a working Python 3 installation. Open a terminal in your preferred location then
 
 ```
 git clone https://github.com/ruggieroguida/montecarlo-pension-uk.git
