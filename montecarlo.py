@@ -46,7 +46,7 @@ annual_contribution = 12.0 * personal_contribution + 12 * work_contribution
 contribution_growth = inputs["contributions"]["growth"]  # Because of payrise for example
 gov_topup = inputs["contributions"]["gov_topup"]         # Higher tax rate. This is valid only in UK and as of 2021
 # If for example you have other sources of income
-contribution_during_retirment = inputs["contributions"]["retirement"]
+contribution_during_retirement = inputs["contributions"]["retirement"]
 
 
 # Expenses during retirement. During working years expenses do not count
@@ -127,7 +127,7 @@ for i in range(samples):
             annual_values.append(final_annual_value + annual_investment)
         else:  # After retirement
             # Assume we withdraw at the beginning of the year - Conservative assumption
-            if sustainable_withdrawal_rate:  # To be reviewed
+            if sustainable_withdrawal_rate:  # To be reviewed. Ignore for now
                 if swr_percentage * annual_values[-1] > annual_withdrawal:
                     actual_annual_withdrawal = annual_withdrawal
                 else:
@@ -135,7 +135,7 @@ for i in range(samples):
                         annual_values[-1]
             else:
                 if year <= state_pension_years:
-                    # I need to withdraw all expected expesnes
+                    # I need to withdraw all expected expenses
                     actual_annual_withdrawal = annual_withdrawal
                 else:
                     actual_annual_withdrawal = annual_withdrawal - \
@@ -153,7 +153,7 @@ for i in range(samples):
             annual_investment *= (1.0 + contribution_growth)
         else:                                                   # After retirement - No growth
             # Assume it will not increase. Safely I assume 0.0
-            annual_investment = contribution_during_retirment
+            annual_investment = contribution_during_retirement
 
         # Limit stocks contribution to min_stocks%
         stocks = max(min_stocks, stocks - stocks_to_bonds)
@@ -167,7 +167,7 @@ for i in range(samples):
     # plt.plot(annual_values)
 
     # Let's create some statistics at various ages
-    year_55 = 55 - age  # Minimum retirment age in UK as of 2020
+    year_55 = 55 - age  # Minimum retirement age in UK as of 2020
     value_55.append(annual_values[year_55])
 
     year_retirement = retirement_age - age
