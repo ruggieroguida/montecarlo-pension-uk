@@ -1,5 +1,6 @@
 import numpy as np
 
+# This is for Scotland
 bands = [12500.0, 14549.0, 24944.0, 43430.0, 150000.0, 1000000.0]
 rates = [    0.0,    19.0,    20.0,    21.0,     41.0,      46.0]
 
@@ -91,9 +92,3 @@ def net_to_gross(net_income, bands, rates):
 
   # print(gross_income)
   return gross_income
-
-
-# gross_to_net(625000, bands, rates)
-# print()
-gross_income = net_to_gross(30000, bands, rates)
-print(gross_income)

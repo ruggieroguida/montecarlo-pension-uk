@@ -79,7 +79,7 @@ living_years = max_age - age                    # Number of years left
 working_years = retirement_age - age
 state_pension_years = state_pension_age - \
     age   # Number of years before state pension
-print("age:                     " + str(age))
+print("\nAge:                     " + str(age))
 print("Retirement age:          " + str(retirement_age))
 print("Annual withdrawal        " + str(annual_withdrawal))
 print("Working years:           " + str(working_years))
@@ -187,7 +187,7 @@ for i in range(samples):
 
 print("\nFinal stocks/bonds: " + str(stocks) + "/" + str(bonds))
 
-print("\nMin withdrawal")
+print("\nMin withdrawal (TODO: SWR - IGNORE FOR NOW")
 stats(min_annual_withdrawals)
 
 print("\nValue at the 55")

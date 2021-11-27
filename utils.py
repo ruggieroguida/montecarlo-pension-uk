@@ -24,7 +24,6 @@ def find_first_negative(array):
 def age(dob, today = dt.date.today()):
     difference_in_years = relativedelta(today, dob).years
     difference_in_months = relativedelta(today, dob).months
-    print(difference_in_months)
     if difference_in_months <= 6:
       years = difference_in_years
     else:
